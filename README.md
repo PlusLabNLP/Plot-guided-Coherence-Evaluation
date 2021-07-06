@@ -14,7 +14,7 @@ This repository contains code for [Plot-guided-Coherence-Evaluation](https://acl
 ```
 
 ### Install Requirements
-Please refer requirements.txt file to get all the necessary packages to run the code. In our manipulations, we use COMET model to manipulate the logically ordered plots. You can download the model from https://github.com/atcbosselut/comet-commonsense. Download and save the model in a new directory called "pretrained_models".
+Please use requirements.txt file to get all the necessary packages to run the code. In our manipulations, we use COMET model to manipulate the logically ordered plots. You can download the model from https://github.com/atcbosselut/comet-commonsense. Download and save the model in a new directory called "pretrained_models".
 
 ##Data Creation, the evaluators training and testing steps
 1. Our proposed four different approaches including Non-logically Ordered Plots, Contradiction Insertion, Repetition Insertion and Random Substitution manipulations can be applied by:
