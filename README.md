@@ -35,7 +35,7 @@ Please use requirements.txt file to get all the necessary packages to run the co
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can set different generation parameters for generating different implausible stories.
 
-4. We follow the code for [AF]( https://github.com/rowanz/hellaswag) on the Data/WP/WP_Eval/WP_AF_input.json and Data/ROC/ROC_Eval/ROC_AF_input.json data to select the challenging implausible stories.
+4. We follow the code for [AF]( https://github.com/rowanz/hellaswag) on the [Data/WP/WP_Eval/WP_AF_input.json](https://drive.google.com/drive/u/0/folders/1_s1QwXRqtnazXht3IEgHP-bdnf2hNg66) and Data/ROC/ROC_Eval/ROC_AF_input.json data to select the challenging implausible stories.
 
 5. The output from AF technique is in json format. We convert it to tsv format which is a suitable input format for our evaluators. In this format, we have one plausible story with the label "1" and three implausible stories with the label "0".
 
