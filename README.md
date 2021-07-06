@@ -19,9 +19,9 @@ Please use requirements.txt file to get all the necessary packages to run the co
 ## Data Creation, the evaluators training and testing steps
 1. Our proposed four different approaches including Non-logically Ordered Plots, Contradiction Insertion, Repetition Insertion and Random Substitution manipulations can be applied by:
 
-&nbsp;&nbsp;python storyline_manipulation_WP.py --data_dir Data/WP/WP_Eval  --fname WP_train 
+&nbsp;&nbsp;&nbsp;&nbsp;python storyline_manipulation_WP.py --data_dir Data/WP/WP_Eval  --fname WP_train 
 
-  python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocstories_valid
+&nbsp;&nbsp;&nbsp;&nbsp;python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocstories_valid
 
 
 2. In order to generate implausible stories conditioned on the manipulated plots, we use BART model as a conditional LM. We have finetuned BART on both ROC_LM and WP_LM data for three epochs using [Fairseq](https://github.com/pytorch/fairseq). You can download these models from [here](blahblahs). The BART model finetuned on ROCstories dataset should be placed in Models/Ft_BART_Story_Generator/ROC/ while the finetuned BART model on the WP dataset should be located in Models/Ft_BART_Story_Generator/WP/. 
