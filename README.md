@@ -16,7 +16,7 @@ This repository contains code for [Plot-guided-Coherence-Evaluation](https://acl
 ### Install Requirements
 Please use requirements.txt file to get all the necessary packages to run the code. In our manipulations, we use COMET model to manipulate the logically ordered plots. You can download the model from https://github.com/atcbosselut/comet-commonsense. Download and save the model in a new directory called "pretrained_models".
 
-##Data Creation, the evaluators training and testing steps
+## Data Creation, the evaluators training and testing steps
 1. Our proposed four different approaches including Non-logically Ordered Plots, Contradiction Insertion, Repetition Insertion and Random Substitution manipulations can be applied by:
 python storyline_manipulation_WP.py --data_dir Data/WP/WP_Eval  --fname WP_train 
 python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocstories_valid
