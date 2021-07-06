@@ -29,28 +29,28 @@ python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocst
 
 3. We leverage the finetuned BART models to generate 6 different negative samples for each plausible story and then use the [Adversarial Filtering (AF) technique](https://arxiv.org/abs/1905.07830) proposed by Zellers et al. (2019) to select the three most challenging implausible ones for the evaluator. To generate negative samples and make the data ready for applying AF technique run:
 
-python make_AF_input_WP.py --num_negative_samples 6
+  python make_AF_input_WP.py --num_negative_samples 6
 
-python make_AF_input_ROC.py --num_negative_samples 6
+  python make_AF_input_ROC.py --num_negative_samples 6
 
-You can set different generation parameters for generating different implausible stories.
+  You can set different generation parameters for generating different implausible stories.
 
 4. We follow the code for [AF]( https://github.com/rowanz/hellaswag) on the Data/WP/WP_Eval/WP_AF_input.json and Data/ROC/ROC_Eval/ROC_AF_input.json data to select the challenging implausible stories.
 
 5. The output from AF technique is in json format. We convert it to tsv format which is a suitable input format for our evaluators. In this format, we have one plausible story with the label "1" and three implausible stories with the label "0".
 
-python make_tsv_input_WP.py 
+  python make_tsv_input_WP.py 
 
-python make_tsv_input_ROC.py
+  python make_tsv_input_ROC.py
 
 6. We use the run_glue.py code from [huggingface](https://github.com/huggingface/transformers) to finetune RoBERTa model for ROCstories and Longformer for WP dataset. You can download the evaluators from [here](link). These models should be placed in Models/Ft_RoBERTa/ and Models/Ft_Longformer/ directories respectively. We also use run_glue.py code to predict the scores for the test data.
 
 
 7. In order to examine the performance of our evaluators, we have collected human judgments through AMT. Data/AMT/AMT_ROC.csv and Data/AMT/AMT_WP.csv files consist of these human evaluations. To get the Spearman and Kendall correlations between predicted scores using our evaluators and human judgments you can run:
 
-python Pearson_corr.py --data ROC
+  python Pearson_corr.py --data ROC
 
-python Pearson_corr.py --data WP
+  python Pearson_corr.py --data WP
 
 
 
