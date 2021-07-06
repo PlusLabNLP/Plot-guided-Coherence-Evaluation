@@ -1,0 +1,13 @@
+python==3.6
+ftfy==6.0.3
+pyinflect==0.5.1
+spacy==2.3.5
+fairseq==0.7.2
+transformers==3.1.0
+ipython==7.25.0
+numpy==1.17.3
+nltk==3.5
+torch==1.4.0
+torchvision==0.4.2
+torchtext==0.4.0
+sklearn==0.21.3
