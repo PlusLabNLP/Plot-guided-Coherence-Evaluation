@@ -54,4 +54,4 @@ Please use requirements.txt file to get all the necessary packages to run the co
 
 
 
-If there are any comments or issues please contact [me](sarikgha@usc.edu).
+For any comments or issues feel free to contact [me](sarikgha@usc.edu).
