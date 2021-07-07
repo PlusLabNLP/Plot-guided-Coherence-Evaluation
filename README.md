@@ -24,7 +24,7 @@ Please use requirements.txt file to get all the necessary packages to run the co
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocstories_train
 
 
-2. In order to generate implausible stories conditioned on the manipulated plots, we use BART model as a conditional LM. We have finetuned BART on both ROC_LM and WP_LM data for three epochs using [Fairseq](https://github.com/pytorch/fairseq). You can download these models from [here](). The BART model finetuned on ROCstories dataset should be placed in Models/Ft_BART_Story_Generator/ROC/ while the finetuned BART model on the WP dataset should be placed in Models/Ft_BART_Story_Generator/WP/. 
+2. In order to generate implausible stories conditioned on the manipulated plots, we use BART model as a conditional LM. We have finetuned BART on both ROC_LM and WP_LM data for three epochs using [Fairseq](https://github.com/pytorch/fairseq). You can download these models from [ft_BART_ROC](https://drive.google.com/file/d/1QaeZSGk9JFygUCOIacC_1Sm3tjXB_zQC/view?usp=sharing) and [ft_BART_WP](https://drive.google.com/file/d/1QFSlDUsK5nhIHVf_Wo8eifdVDKhODV0H/view?usp=sharing). The BART model finetuned on ROCstories dataset should be placed in Models/Ft_BART_Story_Generator/ROC/ while the finetuned BART model on the WP dataset should be placed in Models/Ft_BART_Story_Generator/WP/. 
 
 
 3. We leverage the finetuned BART models to generate 6 different negative samples for each plausible story and then use the [Adversarial Filtering (AF) technique](https://arxiv.org/abs/1905.07830) proposed by Zellers et al. (2019) to select the three most challenging implausible ones for the evaluator. To generate negative samples and make the data ready for applying AF technique run:
@@ -43,7 +43,7 @@ Please use requirements.txt file to get all the necessary packages to run the co
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python make_tsv_input_ROC.py
 
-6. We use the run_glue.py code from [huggingface](https://github.com/huggingface/transformers) to finetune RoBERTa model for ROCstories and Longformer for WP dataset. You can download the evaluators from [ft_roberta]() and [ft_longformer](). These models should be placed in Models/Ft_RoBERTa/ and Models/Ft_Longformer/ directories respectively. We also use run_glue.py code to predict the scores for the test data.
+6. We use the run_glue.py code from [huggingface](https://github.com/huggingface/transformers) to finetune RoBERTa model for ROCstories and Longformer for WP dataset. You can download the evaluators from [ft_roberta](https://drive.google.com/file/d/1_byN9elrTO2J_nEGAnIjoBoYLZfCpsAp/view?usp=sharing) and [ft_longformer](https://drive.google.com/file/d/1Go25mHaKK4yYcfADK9qbtJUIZL0MPTch/view?usp=sharing). These models should be placed in Models/Ft_RoBERTa/ and Models/Ft_Longformer/ directories respectively. We also use run_glue.py code to predict the scores for the test data.
 
 
 7. In order to examine the performance of our evaluators, we have collected human judgments through AMT. Data/AMT/AMT_ROC.csv and Data/AMT/AMT_WP.csv files consist of these human evaluations. To get the Spearman and Kendall correlations between predicted scores using our evaluators and human judgments you can run:
