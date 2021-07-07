@@ -1,6 +1,6 @@
 # Plot-guided-Coherence-Evaluation
 
-This repository contains code for [Plot-guided-Coherence-Evaluation](https://aclanthology.org/2021.naacl-main.343/) paper. For citation please use the following citation:
+This repository contains code for the [Plot-guided-Coherence-Evaluation](https://aclanthology.org/2021.naacl-main.343/) paper. For citation please use the following citation:
 ```
 @inproceedings{ghazarian2021plot,
   title={Plot-guided Adversarial Example Construction for Evaluating Open-domain Story Generation},
