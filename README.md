@@ -23,6 +23,7 @@ Please use requirements.txt file to get all the necessary packages to run the co
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocstories_train
 
+Note: To run these two codes, you need to first install https://github.com/atcbosselut/comet-commonsense and then put these codes in the home directory and run from there to get the manipulated plots.
 
 2. In order to generate implausible stories conditioned on the manipulated plots, we use BART model as a conditional LM. We have finetuned BART on both ROC_LM and WP_LM data for three epochs using [Fairseq](https://github.com/pytorch/fairseq). You can download these models from [ft_BART_ROC](https://drive.google.com/file/d/1QaeZSGk9JFygUCOIacC_1Sm3tjXB_zQC/view?usp=sharing) and [ft_BART_WP](https://drive.google.com/file/d/1QFSlDUsK5nhIHVf_Wo8eifdVDKhODV0H/view?usp=sharing). The BART model finetuned on ROCstories dataset should be placed in Models/Ft_BART_Story_Generator/ROC/ while the finetuned BART model on the WP dataset should be placed in Models/Ft_BART_Story_Generator/WP/. 
 
