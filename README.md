@@ -19,7 +19,7 @@ Please use requirements.txt file to get all the necessary packages to run the co
 ## Data Creation, the evaluators training and testing steps
 1. Our proposed four different approaches including Non-logically Ordered Plots, Contradiction Insertion, Repetition Insertion and Random Substitution manipulations can be applied by:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"python storyline_manipulation_WP.py --data_dir Data/WP/WP_Eval  --fname WP_train" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```python storyline_manipulation_WP.py --data_dir Data/WP/WP_Eval  --fname WP_train``` 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python storyline_manipulation_ROC.py --data_dir Data/ROC/ROC_Eval/ --fname Rocstories_train
 
