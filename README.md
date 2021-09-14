@@ -13,6 +13,7 @@ This repository contains code for the [Plot-guided-Coherence-Evaluation](https:/
 }
 ```
 
+
 ### Install Requirements
 Please use requirements.txt file to get all the necessary packages to run the code. In our manipulations, we use COMET model to manipulate the logically ordered plots. You can download the model from https://github.com/atcbosselut/comet-commonsense. Download and save the model in a new directory called "pretrained_models".
 
